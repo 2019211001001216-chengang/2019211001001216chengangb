@@ -3,13 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <!--add code about new servlet-->
+    <!--tell to tomcat about HelloWorldServlet-->
     <servlet>
        <servlet-name>Anyname</servlet-name>
        <servlet-class>com.chengang.week2.demo.HelloWorldServlet</servlet-class>
     </servlet>
-<servlet-mapping>
-    <servlet-name>Anyname</servlet-name>
-    <url-pattern>/hello/</url-pattern>
+<servlet>
+    <servlet-name>LifeCycleServlet</servlet-name>
+    <servlet-class>com.chengang.week3.demo.lifeCycleServlet</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>anyname</servlet-name>>
+    <url-pattern>/hello/</url-pattern><!--url always start with /-->
+    </servlet-mapping>>
+    <servlet-mapping>
+        <sevlet-name>LifeCycleServlet</sevlet-name>
+        <url-pattern>life</url-pattern>
+        <!--/life ==LifeCycleServlet==com.chengang.week3.demo.lifeCycleServlet-->
 </servlet-mapping>
 </web-app>
